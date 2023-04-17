@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400&display=swap');
+
+.hide {
+	display: none;
+}
+body {
+	background: url(https://images.unsplash.com/photo-1580519542036-c47de6196ba5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80) center / cover;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+}
+.wrapper {
+	background: linear-gradient(45deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.9));
+	backdrop-filter: blur(10px);
+	text-align: center;
+	font-size: 20px;
+	padding: 45px;
+	border-radius: 25px;
+	min-width: 750px;
+	box-shadow: 0 16px 64px #2b2d2e;
+}
+.question {
+	margin-bottom: 15px;
+	margin-top: 30px;
+}
+
+input {
+	width: 200px;
+	padding: 10px;
+	border: none;
+	/*засунуть цвет в переменную*/
+	background: #c3e6e0;
+	font-size: 14px;
+	text-align: center;
+}
+select {
+	padding: 10px;
+	text-align: center;
+	/*хз поч, но если 200 получается меньше, чем у input*/
+	width: 220px;	
+	border: none;
+	/*засунуть цвет в переменную*/
+	/*background: #d3c3de;*/
+	background: #c3e6e0;
+	font-size: 14px;
+}
+.btn_count {
+	margin-top: 40px;
+	padding: 10px;
+	width: 220px;
+	background: #125f7a;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	font-size: 14px;
+}
+.btn_count:hover {
+	opacity: 0.8;
+	transition: 0.5s;
+}
+h3 {
+	font-size: 30px;
+	/*font-weight: 400;*/
+}
+
+.res {
+	margin-top: 30px;
+}

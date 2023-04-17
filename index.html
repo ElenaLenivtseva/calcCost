@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Стоимость жизни</title>
+	<link rel="stylesheet" href="style.css"></head>
+<body>
+	<div class="wrapper">
+		<h3>Как вы будете жить в другом городе</h3>
+	<p class="question">Выберете текущий город</p>
+	<select name="current_city" id="current_city">
+		<!-- мб value иначе назвать? -->
+		<!-- мб надо названия городов брать из базы данных и добавлять в option динамически, через цикл... -->
+		<option value=0>Москва</option>
+		<option value=1>Санкт-Петербург</option>
+		<option value=2>Томск</option>
+	</select>
+
+	<p class="question">Выберете город, куда хотите переехать</p>
+	<select name="goal_city" id="goal_city">
+		<!-- мб value иначе назвать? -->
+		<!-- мб надо названия городов брать из базы данных и добавлять в option динамически, через цикл... -->
+		<!-- надо когда юзер выберет тек.город убрать его название в целевых городах, чисто по value сравнить и убрать - сделать проверку крч -->
+		<option value=0>Москва</option>
+		<!-- поставить selected другой город -->
+		<option value=1 selected>Санкт-Петербург</option>
+		<option value=2>Томск</option>
+	</select>
+
+	<!-- надо добавить сюда что-то с регулярными выражениями, потому что я могу вставлять --- -->
+	<p class="question">Сколько вы зарабатываете в месяц?</p>
+	<input type="number" min="0" class="user_salary">
+	<p class="question">Сколько в месяц тратите на еду?</p>
+	<input type="number" min="0" class="user_food">
+	<p class="question">Сколько тратите на ЖКХ в месяц по-среднему?</p>
+	<input type="number" min="0" class="user_bills">
+	<p class="question">Арендуете жилье или имеете свое?</p>
+	<!-- тут должен быть выбор. При ответе арендую, д появиться еще 1 блок с вопросом ниже, иначе он скрыт-->
+		<select name="house" id="house">
+		<!-- value надо бы поменять, сделать однотипными везде и хорошо бы по БЭМ-->
+			<option value="owner">Свое жилье</option>
+			<option value="renter">Арендую</option>
+			
+	</select>
+	<div class="renter hide"> 
+		<p class="question">Сколько тратите на аренду в месяц?</p>
+		<input type="number" min="0" class="user_rent">
+	</div>
+	<p class="question">Имеете свою машину, пользуетесь такси или общ.транспортом?</p>
+	<!-- тут выбор из 3. В зависимости от варианта показываются соотвествующие блоки с вопросами -->
+		<select name="transport" id="transport">
+		<!-- мб value иначе назвать? -->
+		<!-- мб надо названия городов брать из базы данных и добавлять в option динамически, через цикл... -->
+			<option value="car">Своя машина</option>
+			<option value="taxi">Езжу на такси</option>
+			<option value="pub_tr">Пользуюсь общ.транспортом</option>
+		</select>
+
+	<div class="car">
+		<p class="question">Сколько тратите на обслуживание машины в месяц (топливо, ремонт)?</p>
+		<input type="number" min="0" class="user_car">
+	</div>
+	<div class="taxi hide">
+		<p class="question">Сколько тратите на такси в месяц?</p>
+		<input type="number" min="0" class="user_taxi">
+	</div>
+	<div class="pub_tr hide">
+		<p class="question">Сколько тратите на общественный транспорт в месяц?</p>
+		<input type="number" min="0" class="user_pb_tr">
+	</div>
+	
+	<button class="btn_count">Подсчитать</button>
+	<div class="res" class="hide"></div>
+	<!-- еще бы что-то про детей добавить, но где брать такую информацию? с чем сравнивать? с пособиями? но ведь кол-во детей разное, состав семьи разный = объем пособий разный, нельзя по пособиям сравнить, слишком много вариантов тогда -->
+	</div>
+	<script src="data_v2.js"></script>
+	<script src="script.js"></script>
+	<!-- <script src="work.js"></script> -->
+</body>
+</html>
